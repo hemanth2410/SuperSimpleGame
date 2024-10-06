@@ -52,6 +52,7 @@ public class BulletObjectPool : PersistentSingleton<BulletObjectPool>
         var go = Instantiate(m_BulletPrefab);
         Bullet bullet = go.GetComponent<Bullet>();
         bullet.pool = Pool;
+        go.transform.parent = this.transform;
         return bullet;
     }
 }
