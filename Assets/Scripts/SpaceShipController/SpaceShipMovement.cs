@@ -15,6 +15,9 @@ public class SpaceShipMovement : MonoBehaviour
     {
         rb = GetComponent<Rigidbody2D>();  // Get the Rigidbody2D component
         inputManager = GetComponent<InputManager>();  // Get the InputManager component
+        // Remove this later 
+        // Dont forget
+        PlayerSingletons.Instance.RegisterPlayer(this.gameObject);
     }
     private void Update()
     {
